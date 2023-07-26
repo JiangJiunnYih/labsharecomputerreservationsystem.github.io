@@ -132,7 +132,8 @@ function openCity(evt, cityName) {
     function logout() {
     alert("Logout Successfully");
     setTimeout(function() {
-      window.location.assign("index.html");
+      window.history.pushState({}, "", "index.html");
+      window.location.replace("index.html");
     }, 500);
     return false;
   }
