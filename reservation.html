@@ -130,9 +130,9 @@ function openCity(evt, cityName) {
   evt.currentTarget.classList.add("active");
 }
     function logout() {
+    sessionStorage.clear();
     alert("Logout Successfully");
     setTimeout(function() {
-      window.history.pushState({}, "", "index.html");
       window.location.replace("index.html");
     }, 500);
     return false;
