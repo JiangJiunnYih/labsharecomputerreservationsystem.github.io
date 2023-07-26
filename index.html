@@ -7,15 +7,21 @@
   <title>LAB 814 公用電腦使用預約系統 - Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body { font-family: Arial; background-image: url('1.jpg'); background-repeat: no-repeat;
-  background-size: cover;
+    body {
       margin: 0;
       padding: 0;
-	 }
-    /* Adjust background size for mobile devices */
-    @media (max-width: 767px) {
+      background-image: url('1.jpg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-attachment: fixed;
+      background-size: cover; /* or background-size: contain; */
+    }
+
+    /* Add media queries for responsiveness */
+    @media screen and (max-width: 767px) {
+      /* For mobile devices */
       body {
-        background-size: 100% auto;
+        background-size: cover; /* or background-size: contain; */
       }
     }
     
