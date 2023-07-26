@@ -12,6 +12,13 @@
       margin: 0;
       padding: 0;
 	 }
+    /* Adjust background size for mobile devices */
+    @media (max-width: 767px) {
+      body {
+        background-size: 100% auto;
+      }
+    }
+    
     form { max-width: 300px; margin: 0 auto; }
     input { width: 100%; padding: 10px; margin-bottom: 10px; }
     button { width: 109%; padding: 10px; background-color: #039BE5; color: #fff; border: none; cursor: pointer; }
