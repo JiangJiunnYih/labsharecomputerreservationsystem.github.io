@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LAB 814 公用電腦使用預約系統 - Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial; }
+    form { max-width: 300px; margin: 0 auto; }
+    input { width: 100%; padding: 10px; margin-bottom: 10px; }
+    button { width: 100%; padding: 10px; background-color: #039BE5; color: #fff; border: none; cursor: pointer; }
+    button:hover { background-color: #0277BD; }
+    h2 { text-align: center; } /* Center the h2 element */
+  </style>
+</head>
+<body style="background-color:#F2FFFF;">
+  <h2>LAB 814 公用電腦使用預約系統</h2>
+  <form onsubmit="return login()">
+    <input type="text" id="username" placeholder="Username" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <button type="submit">Login</button>
+  </form>
+
+  <script>
+    function login() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Perform authentication here (You should implement server-side validation for a secure system)
+
+      if (username === 'lab814' && password === 'waterlab814') {
+        window.location.assign("reservation.html");
+		alert("Login Successfully");
+        return true; // Return true to submit the form
+      } else {
+        alert('Invalid username or password. Please try again.');
+        return false; // Return false to prevent form submission
+      }
+    }
+  </script>
+</body>
+</html>
