@@ -68,6 +68,33 @@ body { font-family: Arial; background-image: url('newbg.jpg'); background-repeat
 }
     
 </style>
+
+<script>
+      // Function to update the time and date on the page
+      function updateTime() {
+        // Get the current date and time
+        var now = new Date();
+
+        // Format the time as HH:MM:SS
+        var hours = now.getHours().toString().padStart(2, '0');
+        var minutes = now.getMinutes().toString().padStart(2, '0');
+        var seconds = now.getSeconds().toString().padStart(2, '0');
+        var timeString = hours + ':' + minutes + ':' + seconds;
+
+        // Format the date as YYYY-MM-DD
+        var year = now.getFullYear();
+        var month = (now.getMonth() + 1).toString().padStart(2, '0');
+        var day = now.getDate().toString().padStart(2, '0');
+        var dateString = year + '-' + month + '-' + day + '&nbsp;&nbsp;&nbsp;';
+
+        // Update the HTML element with the time and date
+        var dateTimeString = '當前時間: ' + dateString + timeString;
+        show = dateTimeString.fontsize(2)
+        document.getElementById('datetime').innerHTML = show;
+      }
+      setInterval(updateTime, 1000);
+    </script>
+    
 </head>
 <body>
 
@@ -108,6 +135,19 @@ body { font-family: Arial; background-image: url('newbg.jpg'); background-repeat
 <form onsubmit="return logout()">
     <button class="button button2">登出</button>
   </form>
+
+<div class="wrapper">
+    <div class="content">
+        <footer class="wrapper" style="background-color:#2B2B2B;text-align:left;padding:0px;margin-top:0px;color:#F5F5F5;bottom: 0;"><br><br>
+        實驗室位址:&nbsp;&nbsp;&nbsp;<a href="https://www.google.com/maps?q=24.7847265,120.9973599" target="_blank" style="color: #FFFFFF;">新竹市東區大學路1001號 綜合一館 LAB 814</a>
+
+<p>碩一實驗室:&nbsp;&nbsp;&nbsp;新竹市東區大學路1001號 綜合一館 10 樓 統倉</p>
+<p>碩二實驗室:&nbsp;&nbsp;&nbsp;新竹市東區大學路1001號 綜合一館 11 樓 1101A</p>
+            <p id="datetime"></p><br><br>
+            <div style="text-align:center;"><h6><font face=@標楷體 size=2>Copyright © 2023 JIANG, JIUNN-YIH</h6>
+        </footer>
+    </div>
+</div>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
