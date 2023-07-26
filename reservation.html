@@ -106,7 +106,7 @@ body {font-family: Arial;}
 </div>
 
 <form onsubmit="return logout()">
-    <button type="submit">登出</button>
+    <button class="button button2">登出</button>
   </form>
 
 <script>
@@ -130,15 +130,10 @@ function openCity(evt, cityName) {
   evt.currentTarget.classList.add("active");
 }
     function logout() {
-    // Show the alert first
     alert("Logout Successfully");
-
-    // Add a small delay (e.g., 500 milliseconds) before redirecting
     setTimeout(function() {
       window.location.assign("index.html");
     }, 500);
-
-    // Prevent the form submission, as we are handling the redirection programmatically
     return false;
   }
 </script>
