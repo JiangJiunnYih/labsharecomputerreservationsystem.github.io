@@ -33,10 +33,10 @@ body { font-family: Arial; background-image: url('loginpage.jpg'); background-re
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
 
-      const base64username = btoa(username);
-      const base64password = btoa(password);
+      const username_secur = btoa(username);
+      const password_secur = btoa(password);
 
-      if (base64username === "bGFiODE0" && base64password === "d2F0ZXJsYWI4MTQ=") {
+      if (username_secur === "bGFiODE0" && password_secur === "d2F0ZXJsYWI4MTQ=") {
         alert("登入成功，歡迎使用預約系統");
         sessionStorage.setItem('isLoggedIn', 'true');
         window.location.assign("reservation.html");
