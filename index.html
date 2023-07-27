@@ -27,16 +27,33 @@ body { font-family: Arial; background-image: url('loginpage.jpg'); background-re
   </form>
 
 <script>
-    document.getElementById("loginButton").addEventListener("click", function() {
+    function performLogin() {
+      // Get the values from the form fields
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
 
       // Replace the following lines with your authentication logic
       if (username === "lab814" && password === "waterlab814") {
-        alert("登入成功，歡迎使用");
-        window.location.assign("reservation.html");
+        alert("登入成功，歡迎使用預約系統");
       } else {
-        alert("帳號或密碼錯誤");
+        alert("帳號或密碼錯誤，請再試一次");
+      }
+    }
+
+    document.getElementById("loginButton").addEventListener("click", performLogin);
+
+    // Add event listener for Enter key on both input fields
+    document.getElementById("username").addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        performLogin();
+      }
+    });
+
+    document.getElementById("password").addEventListener("keypress", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        performLogin();
       }
     });
   </script>
