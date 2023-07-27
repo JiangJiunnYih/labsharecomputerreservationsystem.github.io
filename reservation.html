@@ -151,6 +151,15 @@ body { font-family: Arial; background-image: url('newbg.jpg'); background-repeat
 </div>
 
 <script>
+    // Check if the user is logged in by verifying the presence of the login flag in session storage.
+    var isLoggedIn = sessionStorage.getItem('isLoggedIn');
+    if (!isLoggedIn) {
+      // If the user is not logged in, redirect them back to the login page.
+      window.location.href = 'index.html';
+    }
+  </script>
+    
+<script>
 document.addEventListener("DOMContentLoaded", function() {
   // Set the default tab as "1101A 電腦預約"
   document.getElementById("1101A 電腦預約").style.display = "block";
