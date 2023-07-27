@@ -22,20 +22,10 @@ body { font-family: Arial; background-image: url('loginpage.jpg'); background-re
   <form onsubmit="return login()">
     <input type="text" id="username" placeholder="Username" required>
     <input type="password" id="password" placeholder="Password" required>
-    <button type="submit" ontouchstart="touchStartEvent()" onclick="touchStartEvent()">Login</button>
+    <button type="submit" ontouchstart="login()" onclick="login()">Login</button>
   </form>
 
   <script>
-
-    var alertsShown = false;
-
-        function touchStartEvent() {
-            if (!alertsShown) {
-                alertsShown = true;
-                login();
-            }
-        }
-    
     function login() {
       var username = document.getElementById('username').value;
       var password = document.getElementById('password').value;
