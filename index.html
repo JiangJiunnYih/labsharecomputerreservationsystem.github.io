@@ -33,8 +33,10 @@ body { font-family: Arial; background-image: url('loginpage.jpg'); background-re
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
 
-      // Replace the following lines with your authentication logic
-      if (username === "lab814" && password === "waterlab814") {
+      const base64username = btoa(username);
+      const base64password = btoa(password);
+
+      if (base64username === "p3YXRlcmxhYjgxNA==" && base64password === "p3YXRlcmxhYjgxNA==") {
         alert("登入成功，歡迎使用預約系統");
         sessionStorage.setItem('isLoggedIn', 'true');
         window.location.assign("reservation.html");
