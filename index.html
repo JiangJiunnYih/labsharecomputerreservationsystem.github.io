@@ -33,17 +33,11 @@ body { font-family: Arial; background-image: url('loginpage.jpg'); background-re
       // Perform authentication here (You should implement server-side validation for a secure system)
 
       if (username === 'lab814' && password === 'waterlab814') {
-        	alertsShown = true;
-                setTimeout(function() {
-                    alert("Login Successfully");
-                    window.location.assign("reservation.html");
-                }, 100);
-                return true;
+              alert("Login Successfully");
+              window.location.assign("reservation.html");
+              return true;
       } else {
-        alertsShown = true;
-                setTimeout(function() {
-                    alert('Invalid username or password. Please try again.');
-                }, 100);
+                alert('Invalid username or password. Please try again.');
                 return false;
       }
     }
