@@ -13,20 +13,20 @@ body { font-family: Arial; background-image: url('newbg.jpg'); background-repeat
 /* Style the tab */
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+  border: 1px solid #000000;
+  background-color: #FFDA96;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
-  background-color: inherit;
+  background-color: #FFDA96;
   float: left;
-  border: none;
+  border: 5px;
   outline: none;
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
-  font-size: 17px;
+  font-size: 14px;
 }
 
 /* Change background color of buttons on hover */
@@ -67,7 +67,24 @@ body { font-family: Arial; background-image: url('newbg.jpg'); background-repeat
   transition-duration: 0.4s;
   cursor: pointer;
 }
-    
+
+iframe {
+    width: 100%; /* Set the iframe width to 100% of the container */
+    padding: 10px;
+  }
+
+@media screen and (max-width: 768px) {
+    #1101Aiframe, #LAB814iframe {
+      height: 400px; /* Adjust the height for smaller screens */
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    #1101Aiframe, #LAB814iframe {
+      height: 300px; /* Adjust the height further for smaller screens */
+    }
+  }
+
 </style>
 
 <script>
