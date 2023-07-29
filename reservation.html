@@ -277,7 +277,7 @@ function openCity(evt, cityName) {
       const request = document.getElementById("request").value;
 
       const emailLink = "mailto:lab1101reservationsystem@gmail.com?cc=olivereddie1996.mg10@nycu.edu.tw,lab1101reservationsystem@gmail.com,lab814reservatiosystem@gmail.com&subject=預約超過五天請求通知&body=Dear 水老師:%0D%0A%0D%0A"
-        + encodeURIComponent("\t" + name + "\t同學鑑於\t" + request + "\t之需求，故想請求" + day + "天之預約，敬請查照。\n\nBest Regards,\n" + name + "\nPhone:" + phone + "\nEmail:" + email + "\n");
+        + encodeURIComponent("\t" + name + "\t同學鑑於\t" + request + "\t之需求，故想請求" + day + "天之預約，敬請查照。\n\nBest Regards,\n\n" + name + "\nPhone: " + phone + "\nEmail: " + email + "\n\n");
 
       window.location.href = emailLink;
     });
