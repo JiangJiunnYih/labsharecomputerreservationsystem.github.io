@@ -10,6 +10,38 @@ body { font-family: Arial; background-image: url('newbg.jpg'); background-repeat
     h2 {
       text-align: center; /* Center the h2 element */
     }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
 /* Style the tab */
 .tab {
   overflow: hidden;
@@ -136,6 +168,7 @@ iframe {
   <button class="tablinks" onclick="openCity(event, 'LAB 814 電腦預約')">LAB 814 電腦預約</button>
   <button class="tablinks" onclick="openCity(event, '1101A 當前預約狀況')">1101A 當前預約狀況</button>
   <button class="tablinks" onclick="openCity(event, 'LAB 814 當前預約狀況')">LAB 814 當前預約狀況</button>
+  <button class="tablinks" onclick="openCity(event, '五日以上預約請求')">五日以上預約請求</button>
 </div>
 
 <div id="1101A 電腦預約" class="tabcontent">
@@ -156,6 +189,28 @@ iframe {
 <div id="LAB 814 當前預約狀況" class="tabcontent">
   <h3>LAB 814 當前預約狀況</h3>
   <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTaipei&mode=WEEK&showTitle=0&showNav=1&showPrint=0&showDate=1&showCalendars=0&showTabs=0&src=bGFiODE0cmVzZXJ2YXRpb3N5c3RlbUBnbWFpbC5jb20&color=%23039BE5" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+</div>
+
+<div id="五日以上預約請求" class="tabcontent">
+  <h3>五日以上預約請求</h3>
+  <form id="requestForm">
+    <label for="name">姓名:</label>
+    <input type="text" id="name" required>
+
+    <label for="phone">手機:</label>
+    <input type="tel" id="phone" pattern="[0-9]{10}" required>
+
+    <label for="email">電子郵件:</label>
+    <input type="email" id="email" required>
+    
+    <label for="day">預計借用天數(小於 100 天):</label>
+    <input type="tel" id="day" pattern="[0-9]{2}" required>
+
+    <label for="request">使用原因:</label>
+    <textarea id="request" name="request" rows="4" required></textarea>
+
+    <input type="submit" value="建立電子郵件">
+  </form>
 </div>
 
 <br><form onsubmit="return logout()">
@@ -209,6 +264,24 @@ function openCity(evt, cityName) {
     return false;
   }
 </script>
+
+<script>
+    // JavaScript code to handle form submission and email link
+    document.getElementById("requestForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const phone = document.getElementById("phone").value;
+      const email = document.getElementById("email").value;
+      const day = document.getElementById("day").value;
+      const request = document.getElementById("request").value;
+
+      const emailLink = "mailto:lab1101reservationsystem@gmail.com?cc=olivereddie1996.mg10@nycu.edu.tw,lab1101reservationsystem@gmail.com,lab814reservatiosystem@gmail.com&subject=預約超過五天請求通知&body=Dear 水老師:%0D%0A%0D%0A"
+        + encodeURIComponent("\t" + name + "\t同學鑑於\t" + request + "\t之需求，故想請求" + day + "天之預約，敬請查照。\n\nBest Regards,\n" + name + "\nPhone:" + phone + "\nEmail:" + email + "\n");
+
+      window.location.href = emailLink;
+    });
+  </script>
    
 </body>
 </html> 
