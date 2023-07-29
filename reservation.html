@@ -67,6 +67,13 @@ body { font-family: Arial; background-image: url('newbg.jpg'); background-repeat
   cursor: pointer;
 }
 
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: black;
+  color: white;
+}
+
 iframe {
     justify-content: center;
     align-items: center;
@@ -155,18 +162,14 @@ iframe {
     <button class="button button2">登出</button>
   </form><br>
 
-<div class="wrapper">
-    <div class="content">
-        <footer class="wrapper" style="background-color:#2B2B2B;text-align:left;padding:0px;margin-top:0px;color:#F5F5F5;bottom: 0;"><br><br>
-        實驗室位址:&nbsp;&nbsp;&nbsp;<a href="https://www.google.com/maps?q=24.7847265,120.9973599" target="_blank" style="color: #FFFFFF;">新竹市東區大學路1001號 綜合一館 LAB 814</a>
+<footer>
+  <p>實驗室位址:&nbsp;&nbsp;&nbsp;<a href="https://www.google.com/maps?q=24.7847265,120.9973599" target="_blank" style="color: #FFFFFF;">新竹市東區大學路1001號 綜合一館 LAB 814</a><p>
 
 <p>碩一實驗室:&nbsp;&nbsp;&nbsp;新竹市東區大學路1001號 綜合一館 10 樓 統倉</p>
 <p>碩二實驗室:&nbsp;&nbsp;&nbsp;新竹市東區大學路1001號 綜合一館 11 樓 1101A</p>
-            <p id="datetime"></p><br><br>
-            <div style="text-align:center;"><h6><font face=@標楷體 size=2>Copyright © 2023 JIANG, JIUNN-YIH</h6>
-        </footer>
-    </div>
-</div>
+<p id="datetime"></p><br><br>
+<div style="text-align:center;"><h6><font face=@標楷體 size=2>Copyright © 2023 JIANG, JIUNN-YIH</h6>
+</footer>
 
 <script>
     // Check if the user is logged in by verifying the presence of the login flag in session storage.
