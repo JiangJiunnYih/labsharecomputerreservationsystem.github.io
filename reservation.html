@@ -113,13 +113,13 @@ iframe {
   }
 
 @media screen and (max-width: 768px) {
-    #1101Aiframe, #LAB814iframe {
+    #1101Biframe, #LAB814iframe {
       height: 400px; /* Adjust the height for smaller screens */
     }
   }
 
   @media screen and (max-width: 480px) {
-    #1101Aiframe, #LAB814iframe {
+    #1101Biframe, #LAB814iframe {
       height: 300px; /* Adjust the height further for smaller screens */
     }
   }
@@ -161,18 +161,18 @@ iframe {
 <p>2. 本表單為本實驗室專用，請記得在使用後登出，並勿讓非本實驗室之同學在未經老師許可之情形下填寫此預約表單，如經發現將取消該次預約，密碼可能不定期變更</p>
 <p>3. 本系統可供預約之各電腦皆為公用電腦，請勿儲存執行程式必須外之私人文件或檔案，謝謝配合</p>
 <p>4. 預約單位以天為計，每人每次限預約 7 天時間，如有超過 7 天預約之需求，請與水老師聯繫</p>
-<p>5. 預約電腦共分兩台，1101A 電腦所指為近日新安裝於碩二實驗室 MONTECH 之電腦；LAB 814 則是指目前安裝於老師辦公室靠窗之電腦，請確認欲預約之電腦是否正確</p>
+<p>5. 預約電腦共分兩台，1101B 電腦所指為近日新安裝於碩二實驗室 MONTECH 之電腦；LAB 814 則是指目前安裝於老師辦公室靠窗之電腦，請確認欲預約之電腦是否正確</p>
 <br>
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, '1101A 電腦預約')">1101A 電腦預約</button>
+  <button class="tablinks" onclick="openCity(event, '1101B 電腦預約')">1101B 電腦預約</button>
   <button class="tablinks" onclick="openCity(event, 'LAB 814 電腦預約')">LAB 814 電腦預約</button>
-  <button class="tablinks" onclick="openCity(event, '1101A 當前預約狀況')">1101A 當前預約狀況</button>
+  <button class="tablinks" onclick="openCity(event, '1101B 當前預約狀況')">1101B 當前預約狀況</button>
   <button class="tablinks" onclick="openCity(event, 'LAB 814 當前預約狀況')">LAB 814 當前預約狀況</button>
   <button class="tablinks" onclick="openCity(event, '五日以上預約請求')">五日以上預約請求</button>
 </div>
 
-<div id="1101A 電腦預約" class="tabcontent">
-  <h3>1101A 電腦預約</h3>
+<div id="1101B 電腦預約" class="tabcontent">
+  <h3>1101B 電腦預約</h3>
 <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0HvUd61LUMnleLAsEulhccFj0VP7VyE4nMxSCNZP8s0stMMl2fKN7qjErg9xjXWEd5HX4F0jBy?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
 </div>
 
@@ -181,8 +181,8 @@ iframe {
 <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ00ew8v82in3Sx1da_Y9paSdCNmZJePmeidJ2KbDIIMPIaTZS1UlnmTmmokDAVIX07fqZ6cu_cM?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
 </div>
 
-<div id="1101A 當前預約狀況" class="tabcontent">
-  <h3>1101A 當前預約狀況</h3>
+<div id="1101B 當前預約狀況" class="tabcontent">
+  <h3>1101B 當前預約狀況</h3>
   <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FTaipei&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&mode=MONTH&showTz=1&showCalendars=0&src=bGFiMTEwMXJlc2VydmF0aW9uc3lzdGVtQGdtYWlsLmNvbQ&color=%23039BE5" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
 </div>
 
@@ -220,7 +220,7 @@ iframe {
 <footer>
 <p>實驗室位址:&nbsp;&nbsp;&nbsp;<a href="https://www.google.com/maps?q=24.7847265,120.9973599" target="_blank" style="color: #FFFFFF;">新竹市東區大學路1001號 綜合一館 LAB 814</a><p>
 <p>碩一實驗室:&nbsp;&nbsp;&nbsp;新竹市東區大學路1001號 綜合一館 10 樓 統倉</p>
-<p>碩二實驗室:&nbsp;&nbsp;&nbsp;新竹市東區大學路1001號 綜合一館 11 樓 1101A</p>
+<p>碩二實驗室:&nbsp;&nbsp;&nbsp;新竹市東區大學路1001號 綜合一館 11 樓 1101B</p>
 <p id="datetime"></p><br><br>
 <div style="text-align:center;"><h6><font face=@標楷體 size=2>Copyright © 2023 All Right Reserved</h6>
 </footer>
@@ -236,8 +236,8 @@ iframe {
     
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  // Set the default tab as "1101A 電腦預約"
-  document.getElementById("1101A 電腦預約").style.display = "block";
+  // Set the default tab as "1101B 電腦預約"
+  document.getElementById("1101B 電腦預約").style.display = "block";
   document.getElementsByClassName("tablinks")[0].classList.add("active");
 });
 
